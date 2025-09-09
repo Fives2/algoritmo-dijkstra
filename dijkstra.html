@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Algoritmo de Dijkstra</title>
+  </head>
+  <body>
+    <div id="entrada-grafo">    
+        <h3>Grafo de Cidades</h3>
+      <div id="grafo-exibicao"></div>
+    </div>
+    <div id="controles">
+      <input type="text" id="origem" placeholder="Origem (ex: A)" />
+      <input type="text" id="destino" placeholder="Destino (ex: B)" />
+      <button onclick="executarDijkstra()">Calcular caminho</button>
+    </div>
+    <div id="saida"></div>
+
+    <script src="js/cidades.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

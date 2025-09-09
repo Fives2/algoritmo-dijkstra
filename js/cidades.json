@@ -1,0 +1,158 @@
+const cityDistances = {
+    "riodosul": {
+        "lontras": 38.0,
+        "presnereu": 11.0,
+        "agronomica": 26.0,
+        "laurentino": 26.0,
+        "agrolandia": 20.0,
+        "atalanta": 22.1,
+        "bracodotrom": 27.2,
+        "tromcentral": 25.0
+    },
+    "lontras": {
+        "riodosul": 38.0,
+        "bracodotrom": 19.0,
+        "tromcentral": 28.9,
+        "joseboiteux": 10.0,
+        "witmarsun": 42.5,
+        "presgetulio": 16.25
+    },
+    "presnereu": {
+        "riodosul": 11.0,
+        "agronomica": 40.0,
+        "tromcentral": 14.0,
+        "donaemma": 27.5
+    },
+    "agronomica": {
+        "riodosul": 26.0,
+        "presnereu": 40.0,
+        "laurentino": 27.5,
+        "riodooeste": 47.6
+    },
+    "laurentino": {
+        "riodosul": 26.0,
+        "agronomica": 27.5,
+        "agrolandia": 26.25,
+        "riodooeste": 28.0
+    },
+    "agrolandia": {
+        "riodosul": 20.0,
+        "laurentino": 26.25,
+        "atalanta": 28.75
+    },
+    "atalanta": {
+        "riodosul": 22.1,
+        "agrolandia": 28.75
+    },
+    "bracodotrom": {
+        "riodosul": 27.2,
+        "lontras": 19.0
+    },
+    "tromcentral": {
+        "riodosul": 25.0,
+        "lontras": 28.9,
+        "presnereu": 14.0,
+        "ibirama": 36.25,
+        "joseboiteux": 25.0,
+        "donaemma": 12.0
+    },
+    "ibirama": {
+        "tromcentral": 36.25,
+        "joseboiteux": 35.0,
+        "donaemma": 56.1,
+        "taio": 28.9,
+        "salete": 23.75
+    },
+    "joseboiteux": {
+        "lontras": 10.0,
+        "tromcentral": 25.0,
+        "ibirama": 35.0,
+        "witmarsun": 31.0,
+        "vitormeireles": 39.1
+    },
+    "witmarsun": {
+        "lontras": 42.5,
+        "joseboiteux": 31.0,
+        "chaplageado": 43.0
+    },
+    "presgetulio": {
+        "lontras": 16.25,
+        "chaplageado": 23.8
+    },
+    "donaemma": {
+        "presnereu": 27.5,
+        "tromcentral": 12.0,
+        "ibirama": 56.1,
+        "taio": 22.5,
+        "mirimdoce": 9.0
+    },
+    "vitormeireles": {
+        "joseboiteux": 39.1,
+        "salete": 17.0
+    },
+    "riodooeste": {
+        "agronomica": 47.6,
+        "laurentino": 28.0,
+        "mirimdoce": 18.0,
+        "pousoredondo": 37.5
+    },
+    "taio": {
+        "ibirama": 28.9,
+        "donaemma": 22.5,
+        "vidalramos": 25.0
+    },
+    "salete": {
+        "ibirama": 23.75,
+        "vitormeireles": 17.0,
+        "petrolandia": 15.0
+    },
+    "mirimdoce": {
+        "donaemma": 9.0,
+        "riodooeste": 18.0,
+        "santaterezinha": 25.5,
+        "riodocampo": 25.5
+    },
+    "santaterezinha": {
+        "mirimdoce": 25.5,
+        "ituporanga": 14.0,
+        "imbuia": 22.5
+    },
+    "riodocampo": {
+        "mirimdoce": 25.5,
+        "pousoredondo": 26.25,
+        "ituporanga": 45.9
+    },
+    "pousoredondo": {
+        "riodooeste": 37.5,
+        "riodocampo": 26.25
+    },
+    "ituporanga": {
+        "santaterezinha": 14.0,
+        "riodocampo": 45.9,
+        "aurora": 25.5
+    },
+    "aurora": {
+        "ituporanga": 25.5,
+        "imbuia": 30.0,
+        "vidalramos": 8.0
+    },
+    "imbuia": {
+        "santaterezinha": 22.5,
+        "aurora": 30.0,
+        "vidalramos": 18.7
+    },
+    "vidalramos": {
+        "taio": 25.0,
+        "aurora": 8.0,
+        "imbuia": 18.7,
+        "petrolandia": 63.75
+    },
+    "petrolandia": {
+        "salete": 15.0,
+        "vidalramos": 63.75
+    },
+    "chaplageado": {
+        "witmarsun": 43.0,
+        "presgetulio": 23.8
+    }
+};
