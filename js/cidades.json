@@ -1,4 +1,4 @@
-const cityDistances = {
+{
     "riodosul": {
         "lontras": 38.0,
         "presnereu": 11.0,
@@ -155,4 +155,4 @@ const cityDistances = {
         "witmarsun": 43.0,
         "presgetulio": 23.8
     }
-};
+}
