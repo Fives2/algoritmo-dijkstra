@@ -172,7 +172,6 @@ function atualizarExibicaoGrafo() {
     const cidadesOrdenadas = Object.keys(cityGraph).sort((a, b) => cityDisplayNames[a].localeCompare(cityDisplayNames[b]));
 
     for (let no of cidadesOrdenadas) {
-        // --- MELHORIA: A exibição agora é mais limpa e usa os nomes formatados ---
         const conexoes = Object.entries(cityGraph[no])
             .map(([para, peso]) => `${cityDisplayNames[para]} (${peso.toFixed(1)} km)`)
             .join(", ");
@@ -184,8 +183,6 @@ function atualizarExibicaoGrafo() {
  * Executa o algoritmo de Dijkstra para encontrar o menor caminho.
  */
 function executarDijkstra() {
-
-
     const origem = document.getElementById("origem").value;
     const destino = document.getElementById("destino").value;
 
@@ -213,7 +210,7 @@ function executarDijkstra() {
         // Se o nó já foi visitado com uma distância menor, pule
         if (distancias[noAtual] < distancias[noAtual]) continue;
         
-        if (noAtual === destino) break; // Otimização: para quando encontrar o destino
+        if (noAtual === destino) break; // Quando encontrar o destino
 
         for (let vizinho in cityGraph[noAtual]) {
             let alternativa = distancias[noAtual] + cityGraph[noAtual][vizinho];
@@ -263,7 +260,6 @@ function popularSeletores() {
     });
 }
 
-// --- Ponto de Entrada da Aplicação ---
 // Quando a página terminar de carregar, o código aqui será executado.
 document.addEventListener('DOMContentLoaded', () => {
     popularSeletores();
