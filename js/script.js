@@ -1,4 +1,4 @@
-// Grafo representando as cidades e as distâncias entre elas
+// Grafo representando as cidades e os custos entre elas
 let grafoCidades = {
   riodosul: {
     lontras: 38.0,
@@ -158,7 +158,7 @@ let grafoCidades = {
   },
 };
 
-// Objeto para mapear as chaves do JSON para nomes formatados
+// Objeto para mapear as chaves do grafoCidades para nomes formatados
 const cityDisplayNames = {
   agrolandia: "Agrôlandia",
   agronomica: "Agrônomica",
@@ -205,7 +205,7 @@ function atualizarExibicaoGrafo() {
   for (let no of cidadesOrdenadas()) {
     const conexoes = Object.entries(grafoCidades[no])
       .map(
-        ([para, peso]) => `<br>${cityDisplayNames[para]} (${peso.toFixed(1)} km)`
+        ([para, peso]) => `<br>${cityDisplayNames[para]} (${peso.toFixed(1)})`
       )
       .join(", ");
     exibicao.innerHTML += `<div class="city-block"><p><strong>\n${
@@ -276,7 +276,7 @@ function executarDijkstra() {
   } else {
     document.getElementById("saida").innerText =
       `Caminho mais curto: \n\n${caminho.join(" → ")}` +
-      `\n\nDistância total: ${distancias[destino]} km`;
+      `\n\Custo total: ${distancias[destino]}`;
   }
 }
 
